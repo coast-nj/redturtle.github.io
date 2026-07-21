@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Property Management, Construction &amp; Rental Services — Red Turtle PM</title>
-<meta name="description" content="Full-service property care, construction and renovations, rental management, and HOA coordination across Cape May County and the Jersey Shore." />
+<title>Services — Red Turtle Property Management</title>
+<meta name="description" content="Property care, construction and renovations, and rental &amp; financial management across Cape May County and the Jersey Shore." />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,45 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0;border-top:1px solid rgba(43,45,58,.08)}
-.svc-detail.reverse{direction:rtl}.svc-detail.reverse > *{direction:ltr}
-.svc-detail .num{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--red);margin-bottom:12px;display:block}
-.svc-detail h2{margin-bottom:18px}
-.svc-detail .lede{margin-bottom:24px}
-.svc-detail .check-list{list-style:none;padding:0;margin:0 0 28px}
-.svc-detail .check-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:.94rem;color:var(--charcoal-2)}
-.svc-detail .check-list svg{width:20px;height:20px;color:var(--red);flex-shrink:0;margin-top:2px}
-.svc-detail .photo{height:420px;border-radius:var(--radius);overflow:hidden}
-.svc-detail .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.svc-detail .tag{background:var(--red-soft);color:var(--red);padding:4px 12px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-
-/* Pillar dividers */
-.pillar-divider{
-  padding: 60px 0 40px;
-  border-top: 1px solid rgba(43,45,58,.08);
-}
-.pillar-divider:first-of-type{ border-top: 0; padding-top: 30px;}
-.pillar-divider .container{ max-width: 900px; text-align: center;}
-.pillar-divider .badge{
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'Manrope', sans-serif;
-  font-size: .74rem;
-  font-weight: 800;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--red);
-  background: var(--red-soft);
-  padding: 8px 18px;
-  border-radius: 999px;
-  margin-bottom: 20px;
-}
-.pillar-divider .badge::before{
-  content:''; width: 22px; height: 1px; background: var(--red);
-}
-.pillar-divider h2{ margin-bottom: 14px;}
-.pillar-divider p{ color: var(--charcoal-2); max-width: 620px; margin: 0 auto; font-size: 1.05rem;}
-.svc-detail.first-in-pillar{ border-top: 0;}
-
 /* Credentials */
 .creds{background: linear-gradient(160deg, #14151C 0%, #1B1D27 55%, #232533 100%); color:var(--white);padding:50px 0;position:relative;overflow:hidden}
 .creds::before{content:'';position:absolute;top:-30%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(214,40,40,.28) 0%,transparent 62%);pointer-events:none}
@@ -59,13 +20,77 @@
 .cred .lbl{font-size:.68rem;color:rgba(255,255,255,.6);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
 .cred .val{font-family:'Fraunces',serif;font-size:.94rem;color:var(--white);font-weight:500;margin-top:2px;line-height:1.2}
 
-/* Process */
-.process{background:var(--cream-2)}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px}
-.step{position:relative;padding:32px 28px;border-radius:var(--radius);background:var(--white);border:1px solid rgba(43,45,58,.08)}
-.step .num{font-family:'Fraunces',serif;font-style:italic;font-size:2.6rem;line-height:1;color:var(--red);font-weight:400;margin-bottom:18px;display:block}
-.step h3{margin-bottom:10px;font-size:1.15rem}
-.step p{font-size:.92rem;margin-bottom:0}
+/* Pillar sections */
+.pillar-section{
+  padding: 110px 0;
+  border-top: 1px solid rgba(43,45,58,.08);
+}
+.pillar-section.alt{ background: var(--cream-2); border-top: 0; }
+.pillar-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+.pillar-grid.reverse{ direction: rtl; }
+.pillar-grid.reverse > *{ direction: ltr; }
+.pillar-photo{
+  height: 520px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.pillar-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Manrope', sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--red-soft);
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.pillar-content h2{ margin-bottom: 18px; }
+.pillar-content .lede{ margin-bottom: 8px; }
+.pillar-services{
+  list-style: none;
+  padding: 0;
+  margin: 34px 0 34px;
+}
+.pillar-services li{
+  padding: 20px 0;
+  border-top: 1px solid rgba(43,45,58,.12);
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.pillar-services li:first-child{ border-top: 0; }
+.pillar-services .ico{
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: var(--red-soft);
+  color: var(--red);
+  display: flex; align-items: center; justify-content: center;
+}
+.pillar-services .ico svg{ width: 20px; height: 20px; }
+.pillar-services h3{
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+}
+.pillar-services p{
+  font-size: .92rem;
+  color: var(--charcoal-2);
+  margin: 0;
+  line-height: 1.55;
+}
 
 /* FAQ */
 .faq{max-width:820px;margin:0 auto}
@@ -77,17 +102,19 @@
 .faq-item p{margin-top:16px;font-size:1rem;line-height:1.65;margin-bottom:0}
 
 @media (max-width:1024px){
-  .svc-detail{grid-template-columns:1fr;gap:50px;padding:60px 0}
-  .svc-detail.reverse{direction:ltr}
-  .svc-detail .photo{height:340px}
-  .process-grid{grid-template-columns:repeat(2,1fr)}
   .creds-grid{grid-template-columns:repeat(2,1fr);gap:28px}
-  .pillar-divider{ padding: 50px 0 30px;}
+  .pillar-section{ padding: 80px 0; }
+  .pillar-grid{ grid-template-columns: 1fr; gap: 50px; }
+  .pillar-grid.reverse{ direction: ltr; }
+  .pillar-photo{ height: 380px; }
 }
 @media (max-width:720px){
-  .process-grid{grid-template-columns:1fr}
-  .svc-detail{padding:50px 0}
   .creds-grid{grid-template-columns:1fr}
+  .pillar-section{ padding: 60px 0; }
+  .pillar-photo{ height: 300px; }
+  .pillar-services li{ grid-template-columns: 36px 1fr; gap: 14px; }
+  .pillar-services .ico{ width: 34px; height: 34px; border-radius: 10px; }
+  .pillar-services .ico svg{ width: 17px; height: 17px; }
 }
 </style>
 </head>
@@ -112,7 +139,7 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg><span>Services</span></div>
     <h1>Everything your shore property <em>needs.</em></h1>
-    <p class="lede">Three service pillars, one local team. Routine care, construction and renovations, and full rental &amp; financial management &mdash; all handled in-house across Cape May County.</p>
+    <p class="lede">Three service pillars, one local team. Property care, construction and renovations, and full rental &amp; financial management &mdash; all handled in-house.</p>
   </div>
 </section>
 
@@ -128,273 +155,120 @@
   </div>
 </section>
 
-<!-- ===== PILLAR 1: PROPERTY CARE ===== -->
-<section id="care" class="pillar-divider">
+<!-- ===== PILLAR 01: PROPERTY CARE ===== -->
+<section class="pillar-section" id="care">
   <div class="container">
-    <span class="badge">Pillar 01</span>
-    <h2>Property Care &amp; <em>Maintenance</em></h2>
-    <p>The routine, dependable work that keeps a shore property in shape year-round. Scheduled visits, on-call repairs, seasonal upkeep, and full storm response.</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top: 0; padding-bottom: 30px;">
-  <div class="container">
-
-    <div class="svc-detail first-in-pillar" id="watch">
-      <div>
-        <div class="tag-row"><span class="tag">Year-Round Service</span><span class="tag">Photo Reports</span></div>
-        <span class="num">01 &mdash; Service</span>
-        <h2>Property Watch &amp; <em>Walkthroughs</em></h2>
-        <p class="lede">Scheduled visits, real eyes on your property, and a documented photo report every single time we walk through. Weekly, monthly, or quarterly &mdash; whatever your property needs.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Year-round property watch service</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Customizable inspection schedules (weekly, bi-weekly, monthly)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Detailed photo reports of every visit</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Lock-out service when you forget keys</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Status alerts the moment issues are spotted</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Vacant home checks during off-season</li>
+    <div class="pillar-grid">
+      <div class="pillar-photo">
+        <div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg><div class="title">Property Care Photo</div><div class="sub">Inspection / walkthrough</div></div></div>
+      </div>
+      <div class="pillar-content">
+        <span class="pillar-badge">Pillar 01</span>
+        <h2>Property Care &amp; <em>Maintenance</em></h2>
+        <p class="lede">The routine, dependable work that keeps a shore property in shape year-round. Scheduled visits, on-call repairs, seasonal upkeep, and full storm response.</p>
+        <ul class="pillar-services">
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+            <div><h3>Property Watch &amp; Walkthroughs</h3><p>Scheduled visits, photo reports every trip, vacant-home checks, lock-out service.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg></div>
+            <div><h3>Maintenance &amp; Repairs</h3><p>Handyman, furniture assembly, plumbing, electrical, HVAC, painting. 24/7 emergency response.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
+            <div><h3>Pool, Grounds &amp; Landscaping</h3><p>Certified Pool &amp; Spa Operator, landscape care, irrigation, snow removal.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg></div>
+            <div><h3>Cleanup Services</h3><p>Trash and recycling, junk removal, power washing, attic and garage cleanouts.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg></div>
+            <div><h3>Storm Preparation &amp; Response</h3><p>Pre-storm securing, post-storm inspections, photo-documented insurance reports.</p></div>
+          </li>
         </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
       </div>
-      <div class="photo">
-        <div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Inspection in Progress</div><div class="sub">Walkthrough Photo</div></div></div>
-      </div>
-    </div>
-
-    <div class="svc-detail reverse" id="maintenance">
-      <div>
-        <div class="tag-row"><span class="tag">Licensed Trades</span><span class="tag">24/7 Emergency</span></div>
-        <span class="num">02 &mdash; Service</span>
-        <h2>Maintenance &amp; <em>Repairs</em></h2>
-        <p class="lede">From a stuck door to a failed HVAC unit, our handyman crew and licensed sub-trade network handle it all &mdash; routine or emergency &mdash; with transparent itemized billing.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Handyman service for everyday fixes</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Furniture assembly</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Plumbing repair &amp; service</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Electrical work (licensed electricians)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>HVAC service, repair &amp; replacement</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Interior &amp; exterior painting</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Emergency response within 2 hours</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Crew on Site</div><div class="sub">Maintenance Work</div></div></div></div>
-    </div>
-
-    <div class="svc-detail" id="grounds">
-      <div>
-        <div class="tag-row"><span class="tag">CPO Certified</span><span class="tag">Year-Round Care</span></div>
-        <span class="num">03 &mdash; Service</span>
-        <h2>Pool, Grounds &amp; <em>Landscaping</em></h2>
-        <p class="lede">Our team includes a Certified Pool &amp; Spa Operator and a seasoned grounds crew. We keep the outside of your property looking sharp through every season.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pool maintenance by a Certified Pool &amp; Spa Operator (CPO)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Equipment service, water chemistry, opening &amp; closing</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Grounds management &amp; landscaping</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Lawn care, edging, mulching, seasonal cleanup</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Snow removal &amp; salting contracts</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Irrigation system inspection &amp; repair</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Grounds Care</div><div class="sub">Landscaping / Pool</div></div></div></div>
-    </div>
-
-    <div class="svc-detail reverse" id="cleanup">
-      <div>
-        <div class="tag-row"><span class="tag">On-Demand</span><span class="tag">Same-Day Available</span></div>
-        <span class="num">04 &mdash; Service</span>
-        <h2>Cleanup <em>Services</em></h2>
-        <p class="lede">Trash hauls, attic cleanouts, deck power washing &mdash; the unglamorous work that keeps a property in shape. We come with the trucks, the crew, and the right disposal partners.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Trash &amp; recycling coordination</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Junk removal &amp; haul-away</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Power washing (decks, siding, driveways)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Garage, attic &amp; basement cleanouts</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Post-construction debris removal</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Move-in / move-out clean prep</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Cleanup Crew</div><div class="sub">Power Wash / Haul</div></div></div></div>
-    </div>
-
-    <div class="svc-detail" id="storm">
-      <div>
-        <div class="tag-row"><span class="tag">Hurricane Prep</span><span class="tag">Insurance Docs</span></div>
-        <span class="num">05 &mdash; Service</span>
-        <h2>Storm Preparation <em>&amp; Response</em></h2>
-        <p class="lede">Living at the shore means living with nor'easters, hurricanes, and king tides. We prep your property before the storm and document what we find after &mdash; with photos and reports your insurance carrier will accept.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Hurricane &amp; nor'easter preparation</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Storm shutters, securing outdoor items, sandbagging</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pre-storm property securing checklist</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Post-storm walk-through inspections</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Photo-documented damage reports</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Insurance claim support &amp; documentation</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Storm Prep</div><div class="sub">Boarding / Securing</div></div></div></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== PILLAR 2: CONSTRUCTION & RENOVATIONS ===== -->
-<section id="construction" class="pillar-divider" style="background: var(--cream-2);">
-  <div class="container">
-    <span class="badge">Pillar 02</span>
-    <h2>Construction &amp; <em>Renovations</em></h2>
-    <p>Repairs, updates, and full renovations &mdash; interior and exterior. We handle the work, permits, and vendor coordination in-house. We do not build custom homes.</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top: 0; padding-bottom: 30px; background: var(--cream-2);">
-  <div class="container">
-
-    <div class="svc-detail first-in-pillar" id="exterior">
-      <div>
-        <div class="tag-row"><span class="tag">Shore-Tough Materials</span><span class="tag">Permit Handling</span></div>
-        <span class="num">06 &mdash; Service</span>
-        <h2>Exterior <em>Renovations</em></h2>
-        <p class="lede">Doors, windows, siding, decks &mdash; the outside of a shore property takes constant abuse. We install and renovate with materials chosen to handle salt air, wind, and sun.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Door installation &amp; replacement (entry, patio, storm)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Window replacement (impact-rated available)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Siding repair &amp; full re-siding</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Deck construction, repair &amp; refinishing</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Railings, stairs, outdoor structures</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Permits, inspections &amp; code compliance handled</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21M3 13.125V19.5a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6.375m-16.5 0L12 4.5m-9 8.625l3-2.813m6-5.812l6 5.813m0 0l3 2.813"/></svg><div class="title">Exterior Project</div><div class="sub">Doors / Windows / Siding / Deck</div></div></div></div>
-    </div>
-
-    <div class="svc-detail reverse" id="interior">
-      <div>
-        <div class="tag-row"><span class="tag">Kitchens &amp; Baths</span><span class="tag">Full Remodels</span></div>
-        <span class="num">07 &mdash; Service</span>
-        <h2>Interior <em>Renovations</em></h2>
-        <p class="lede">Kitchens, baths, flooring, full remodels &mdash; anything short of a custom home build. We handle demolition, sub-trade coordination, finishes, and cleanup, start to finish.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Kitchen renovations &amp; remodels</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Bathroom renovations &amp; remodels</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Flooring (hardwood, LVP, tile)</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Interior trim, doors &amp; built-ins</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Whole-house updates &amp; refreshes</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Sub-trade coordination (electrical, plumbing, HVAC)</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Interior Renovation</div><div class="sub">Kitchen / Bath / Remodel</div></div></div></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== PILLAR 3: RENTAL, FINANCIAL & HOA ===== -->
-<section id="rental" class="pillar-divider">
-  <div class="container">
-    <span class="badge">Pillar 03</span>
-    <h2>Rental, Financial &amp; <em>HOA</em></h2>
-    <p>With our New Jersey real estate license in place, we handle rentals, tenant management, rent collection, and full financial reporting &mdash; plus HOA and multi-property coordination.</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top: 0; padding-bottom: 60px;">
-  <div class="container">
-
-    <div class="svc-detail first-in-pillar" id="rental-mgmt">
-      <div>
-        <div class="tag-row"><span class="tag">Licensed Real Estate</span><span class="tag">Vacation &amp; Long-Term</span></div>
-        <span class="num">08 &mdash; Service</span>
-        <h2>Rental &amp; Tenant <em>Management</em></h2>
-        <p class="lede">Whether you own a summer rental in Wildwood or a year-round property in Cape May, we handle the whole rental lifecycle &mdash; marketing, tenants, turnovers, and issues.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Rental listing, marketing &amp; showings</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Tenant screening &amp; lease placement</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Vacation rental turnovers, linens, restocking</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Coordination with Airbnb, VRBO &amp; listing platforms</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Guest &amp; tenant communication</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Damage assessments &amp; deposit handling</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg><div class="title">Rental Property</div><div class="sub">Turnover / Tenant Move-In</div></div></div></div>
-    </div>
-
-    <div class="svc-detail reverse" id="financial">
-      <div>
-        <div class="tag-row"><span class="tag">CPA Friendly</span><span class="tag">Owner Portal</span></div>
-        <span class="num">09 &mdash; Service</span>
-        <h2>Financial Reporting <em>&amp; Rent Collection</em></h2>
-        <p class="lede">Crystal-clear accounting that makes tax season painless. Every dollar in, every dollar out, organized exactly how your accountant wants it &mdash; and available in your owner portal any time.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Rent collection &amp; ACH direct deposits</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Monthly owner statements</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Expense tracking &amp; categorization</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>1099 preparation for vendors</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Year-end financial summaries</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Custom reporting on request</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg><div class="title">Owner Statement</div><div class="sub">Financial Report Mock</div></div></div></div>
-    </div>
-
-    <div class="svc-detail" id="hoa">
-      <div>
-        <div class="tag-row"><span class="tag">Board Support</span><span class="tag">Multi-Property</span></div>
-        <span class="num">10 &mdash; Service</span>
-        <h2>HOA &amp; Vendor <em>Coordination</em></h2>
-        <p class="lede">We work with HOAs, condo boards, and owners managing multiple properties &mdash; handling vendor scheduling, project oversight, and administrative coordination so boards can focus on bigger decisions.</p>
-        <ul class="check-list">
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Vendor supervision &amp; scheduling</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Project bid coordination &amp; quality control</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>HOA &amp; condo administrative support</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multi-property oversight &amp; portfolio reporting</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Common-area maintenance &amp; landscaping</li>
-          <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Board meeting support &amp; vendor reports</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request This Service<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-      <div class="photo"><div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z"/></svg><div class="title">Common Area</div><div class="sub">HOA / Condo Property</div></div></div></div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section process">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow center">How It Works</span>
-      <h2>From first call to first inspection &mdash; <em>under two weeks.</em></h2>
-    </div>
-    <div class="process-grid">
-      <div class="step"><span class="num">01</span><h3>Walkthrough</h3><p>Free on-site visit to assess your property and understand your priorities.</p></div>
-      <div class="step"><span class="num">02</span><h3>Custom Plan</h3><p>Itemized proposal with services, response times, and flat monthly pricing.</p></div>
-      <div class="step"><span class="num">03</span><h3>Onboarding</h3><p>Seven-day handoff: keys, codes, vendor records, and portal access set up.</p></div>
-      <div class="step"><span class="num">04</span><h3>We Take Over</h3><p>First inspection within two weeks. Reports start flowing. You breathe out.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- ===== PILLAR 02: CONSTRUCTION ===== -->
+<section class="pillar-section alt" id="construction">
+  <div class="container">
+    <div class="pillar-grid reverse">
+      <div class="pillar-photo">
+        <div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21M3 13.125V19.5a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6.375m-16.5 0L12 4.5m-9 8.625l3-2.813m6-5.812l6 5.813m0 0l3 2.813"/></svg><div class="title">Construction Photo</div><div class="sub">Renovation project</div></div></div>
+      </div>
+      <div class="pillar-content">
+        <span class="pillar-badge">Pillar 02</span>
+        <h2>Construction &amp; <em>Renovations</em></h2>
+        <p class="lede">Repairs, updates, and full renovations &mdash; interior and exterior. We handle the work, permits, and vendor coordination in-house. We do not build custom homes from the ground up.</p>
+        <ul class="pillar-services">
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.406 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.406 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"/></svg></div>
+            <div><h3>Exterior Renovations</h3><p>Doors, windows, siding, decks, railings, outdoor structures. Salt-air-tough materials.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+            <div><h3>Interior Renovations</h3><p>Kitchens, baths, flooring, trim, built-ins, whole-house refreshes and full remodels.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg></div>
+            <div><h3>Permits &amp; Code Compliance</h3><p>Permit filings, inspection coordination, and vendor management &mdash; handled in-house.</p></div>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PILLAR 03: RENTAL, FINANCIAL & HOA ===== -->
+<section class="pillar-section" id="rental">
+  <div class="container">
+    <div class="pillar-grid">
+      <div class="pillar-photo">
+        <div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg><div class="title">Rental Property Photo</div><div class="sub">Turnover / handover</div></div></div>
+      </div>
+      <div class="pillar-content">
+        <span class="pillar-badge">Pillar 03</span>
+        <h2>Rental, Financial <em>&amp; HOA</em></h2>
+        <p class="lede">With our New Jersey real estate license, we handle the full rental lifecycle, rent collection and financial reporting, and HOA and multi-property coordination.</p>
+        <ul class="pillar-services">
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+            <div><h3>Rental &amp; Tenant Management</h3><p>Marketing, tenant screening, lease placement, vacation turnovers, Airbnb/VRBO coordination.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.375m-1.5-5.625v.75c0 .414.336.75.75.75h.75m-9-2.25h-.75c-.621 0-1.125-.504-1.125-1.125v-.75"/></svg></div>
+            <div><h3>Rent Collection &amp; Financial Reporting</h3><p>ACH deposits, monthly owner statements, expense tracking, 1099s, year-end summaries.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg></div>
+            <div><h3>HOA &amp; Vendor Coordination</h3><p>Board support, vendor scheduling, project oversight, multi-property portfolio reporting.</p></div>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ (trimmed) ===== -->
+<section class="section" style="background: var(--cream-2);">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow center">Questions</span>
       <h2>Common questions, <em>straight answers.</em></h2>
     </div>
     <div class="faq">
-      <details class="faq-item"><summary>What does your monthly service plan include?</summary><p>Routine inspections on your chosen schedule, photo reports of every visit, owner portal access, 24/7 emergency response line, and direct communication with your property manager. Specific work-order labor and materials are billed separately at clearly-disclosed rates.</p></details>
-      <details class="faq-item"><summary>Do you collect rent and manage tenants?</summary><p>Yes. With our New Jersey real estate license in place, we handle the full rental lifecycle &mdash; tenant screening, lease placement, rent collection with ACH deposits to owners, damage handling, and everything in between. This applies to long-term rentals and vacation rentals alike.</p></details>
-      <details class="faq-item"><summary>What kind of construction work do you do?</summary><p>Repairs, updates, and renovations &mdash; both exterior (doors, windows, siding, decks) and interior (kitchens, baths, flooring, full remodels). We do not build custom homes from the ground up. If your project needs new construction of a residence, we can refer you to trusted local builders and stay involved to handle everything else.</p></details>
-      <details class="faq-item"><summary>Do you require long-term contracts?</summary><p>For individual homeowners, no &mdash; our service agreements are month-to-month after the first quarter. We earn your business every month, and if it's not working, you're not locked in. HOA and condo association agreements are the exception: because board work involves budgeting, vendor commitments, and coordinated planning across an entire community, those engagements require a longer minimum term, typically one year. Rental management engagements also carry a season or lease-term minimum.</p></details>
+      <details class="faq-item"><summary>Do you collect rent and manage tenants?</summary><p>Yes. With our New Jersey real estate license, we handle the full rental lifecycle &mdash; tenant screening, lease placement, rent collection with ACH deposits to owners, damage handling, and everything in between. This applies to long-term rentals and vacation rentals alike.</p></details>
+      <details class="faq-item"><summary>What kind of construction work do you do?</summary><p>Repairs, updates, and renovations &mdash; both exterior (doors, windows, siding, decks) and interior (kitchens, baths, flooring, full remodels). We do not build custom homes from the ground up. If your project needs new construction, we can refer you to trusted local builders and stay involved to handle everything else.</p></details>
+      <details class="faq-item"><summary>Do you require long-term contracts?</summary><p>For individual homeowners, no &mdash; our service agreements are month-to-month after the first quarter. HOA and condo association agreements require a longer minimum term (typically one year) because board work involves budgeting and coordinated planning across an entire community. Rental management engagements carry a season or lease-term minimum.</p></details>
       <details class="faq-item"><summary>What's your typical response time for emergencies?</summary><p>Under two hours, day or night. For active emergencies like burst pipes or storm damage, a crew is usually on-site within ninety minutes. Our 24/7 line is answered by a real person, every time.</p></details>
-      <details class="faq-item"><summary>Can I still hire my own contractors?</summary><p>Absolutely. Many owners have favorite plumbers or landscapers they want to keep. We coordinate with your preferred vendors and document the work just like our own crews.</p></details>
-      <details class="faq-item"><summary>Are your crews licensed and insured?</summary><p>Yes. Our handyman and construction crews handle general work directly, and we partner with licensed plumbers, electricians, and HVAC contractors for specialty trades. Red Turtle carries $2M in general liability coverage, holds a New Jersey real estate license, and all sub-trade partners must show current licensing and insurance before working on any property we manage.</p></details>
+      <details class="faq-item"><summary>Are your crews licensed and insured?</summary><p>Yes. Our handyman and construction crews handle general work directly, and we partner with licensed plumbers, electricians, and HVAC contractors for specialty trades. Red Turtle carries $2M in general liability coverage, holds a New Jersey real estate license, and all sub-trade partners must show current licensing before working on any property we manage.</p></details>
     </div>
   </div>
 </section>
@@ -426,8 +300,8 @@
           <span><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Cape May Court House, NJ</span>
         </div>
       </div>
-      <div><h4>Property Care</h4><ul><li><a href="services.html#watch">Property Watch</a></li><li><a href="services.html#maintenance">Maintenance &amp; Repairs</a></li><li><a href="services.html#grounds">Pool &amp; Grounds</a></li><li><a href="services.html#cleanup">Cleanup Services</a></li><li><a href="services.html#storm">Storm Prep &amp; Response</a></li></ul></div>
-      <div><h4>Construction &amp; Rental</h4><ul><li><a href="services.html#exterior">Exterior Renovations</a></li><li><a href="services.html#interior">Interior Renovations</a></li><li><a href="services.html#rental-mgmt">Rental Management</a></li><li><a href="services.html#financial">Rent Collection &amp; Reporting</a></li><li><a href="services.html#hoa">HOA Coordination</a></li></ul></div>
+      <div><h4>Property Care</h4><ul><li><a href="services.html#care">Property Watch</a></li><li><a href="services.html#care">Maintenance &amp; Repairs</a></li><li><a href="services.html#care">Pool &amp; Grounds</a></li><li><a href="services.html#care">Cleanup Services</a></li><li><a href="services.html#care">Storm Prep &amp; Response</a></li></ul></div>
+      <div><h4>Construction &amp; Rental</h4><ul><li><a href="services.html#construction">Exterior Renovations</a></li><li><a href="services.html#construction">Interior Renovations</a></li><li><a href="services.html#rental">Rental Management</a></li><li><a href="services.html#rental">Rent Collection &amp; Reporting</a></li><li><a href="services.html#rental">HOA Coordination</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="portal.html">Owner Portal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
     <div class="foot-bar">
@@ -442,8 +316,6 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')), { threshold: .1 });
-  document.querySelectorAll('.fade-target').forEach(el => { el.classList.add('fade-up'); io.observe(el); });
   document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
     const links = document.querySelector('.nav-links');
     const open = links.style.display === 'flex';

@@ -1,328 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Services — Red Turtle Property Management</title>
-<meta name="description" content="Property care, construction and renovations, and rental &amp; financial management across Cape May County and the Jersey Shore." />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<title>Services — Red Turtle Property Management</title>
+<meta name="description" content="Property care and maintenance, construction and renovations, and rental, leasing, and HOA management across Cape May County, NJ." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 <style>
-/* Credentials */
-.creds{background: linear-gradient(160deg, #14151C 0%, #1B1D27 55%, #232533 100%); color:var(--white);padding:50px 0;position:relative;overflow:hidden}
-.creds::before{content:'';position:absolute;top:-30%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(214,40,40,.28) 0%,transparent 62%);pointer-events:none}
-.creds-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;align-items:center;position:relative;z-index:2}
-.cred{display:flex;gap:12px;align-items:center}
-.cred .ico{width:40px;height:40px;border-radius:50%;background:rgba(214,40,40,.2);color:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cred .ico svg{width:19px;height:19px}
-.cred .lbl{font-size:.68rem;color:rgba(255,255,255,.6);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
-.cred .val{font-family:'Fraunces',serif;font-size:.94rem;color:var(--white);font-weight:500;margin-top:2px;line-height:1.2}
 
-/* Pillar sections */
-.pillar-section{
-  padding: 110px 0;
-  border-top: 1px solid rgba(43,45,58,.08);
+.pillar-sec { border-top: 1px solid var(--line); padding: 72px 0; }
+.pillar-sec:first-of-type { border-top: 0; }
+.pillar-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; }
+.pillar-grid h2 { margin-bottom: .7rem; }
+.pillar-grid > div > p { max-width: 40ch; }
+.svc-list { display: grid; grid-template-columns: 1fr 1fr; gap: .1rem 2.5rem; list-style: none; margin: 0; padding: 0; }
+.svc-list li {
+  display: flex; gap: .8rem; align-items: flex-start;
+  padding: .8rem 0; border-bottom: 1px solid var(--line); font-size: .97rem;
 }
-.pillar-section.alt{ background: var(--cream-2); border-top: 0; }
-.pillar-grid{
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 80px;
-  align-items: center;
+.svc-list li b { font-weight: 600; }
+.svc-list li em { font-style: normal; color: var(--slate); }
+.faq { max-width: 760px; }
+.faq details {
+  border-bottom: 1px solid var(--line); padding: 1.1rem 0;
 }
-.pillar-grid.reverse{ direction: rtl; }
-.pillar-grid.reverse > *{ direction: ltr; }
-.pillar-photo{
-  height: 520px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+.faq summary {
+  cursor: pointer; font-weight: 700; font-size: 1.02rem; list-style: none;
+  display: flex; justify-content: space-between; gap: 1rem; align-items: center;
 }
-.pillar-badge{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Manrope', sans-serif;
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--red);
-  background: var(--red-soft);
-  padding: 7px 16px;
-  border-radius: 999px;
-  margin-bottom: 20px;
-}
-.pillar-content h2{ margin-bottom: 18px; }
-.pillar-content .lede{ margin-bottom: 8px; }
-.pillar-services{
-  list-style: none;
-  padding: 0;
-  margin: 34px 0 34px;
-}
-.pillar-services li{
-  padding: 20px 0;
-  border-top: 1px solid rgba(43,45,58,.12);
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-.pillar-services li:first-child{ border-top: 0; }
-.pillar-services .ico{
-  width: 40px; height: 40px;
-  border-radius: 12px;
-  background: var(--red-soft);
-  color: var(--red);
-  display: flex; align-items: center; justify-content: center;
-}
-.pillar-services .ico svg{ width: 20px; height: 20px; }
-.pillar-services h3{
-  margin-bottom: 4px;
-  font-size: 1.1rem;
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-}
-.pillar-services p{
-  font-size: .92rem;
-  color: var(--charcoal-2);
-  margin: 0;
-  line-height: 1.55;
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--red); font-size: 1.4rem; line-height: 1; }
+.faq details[open] summary::after { content: "\2013"; }
+.faq p { margin: .8rem 0 0; font-size: .97rem; }
+@media (max-width: 900px) {
+  .pillar-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .svc-list { grid-template-columns: 1fr; }
 }
 
-/* FAQ */
-.faq{max-width:820px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(43,45,58,.12);padding:22px 0}
-.faq-item summary{cursor:pointer;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:500;color:var(--charcoal);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:'+';font-family:'Manrope',sans-serif;font-size:1.5rem;color:var(--red);font-weight:300;transition:transform .25s;flex-shrink:0}
-.faq-item[open] summary::after{transform:rotate(45deg)}
-.faq-item p{margin-top:16px;font-size:1rem;line-height:1.65;margin-bottom:0}
-
-@media (max-width:1024px){
-  .creds-grid{grid-template-columns:repeat(2,1fr);gap:28px}
-  .pillar-section{ padding: 80px 0; }
-  .pillar-grid{ grid-template-columns: 1fr; gap: 50px; }
-  .pillar-grid.reverse{ direction: ltr; }
-  .pillar-photo{ height: 380px; }
-}
-@media (max-width:720px){
-  .creds-grid{grid-template-columns:1fr}
-  .pillar-section{ padding: 60px 0; }
-  .pillar-photo{ height: 300px; }
-  .pillar-services li{ grid-template-columns: 36px 1fr; gap: 14px; }
-  .pillar-services .ico{ width: 34px; height: 34px; border-radius: 10px; }
-  .pillar-services .ico svg{ width: 17px; height: 17px; }
-}
 </style>
 </head>
 <body>
 
-<div class="utility">
-  <div class="container">
-    <div class="left">
-      <a href="tel:+16095550100"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(609) 555-0100</a>
-      <a href="mailto:info@redturtlepm.com"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>info@redturtlepm.com</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Red Turtle Property Management — home"><span class="logo logo-nav"></span></a>
+    <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="services.html" class="is-active">Services</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a><a href="tel:+16095550100" class="only-mobile">Call (609) 555-0100</a><a href="contact.html" class="only-mobile">Get a quote</a></nav>
+    <div class="nav-actions">
+      <a href="tel:+16095550100" class="nav-phone">(609) 555-0100</a>
+      <a href="contact.html" class="btn btn-red">Get a quote</a>
     </div>
-    <div class="right">
-      <span class="pill">24/7 Emergency Service</span>
-      <a href="portal.html">Owner Portal &rarr;</a>
-    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</div>
+</header>
 
-<nav class="nav"><div class="container"><a href="index.html" class="logo-img size-nav" aria-label="Red Turtle home"></a><div class="nav-links"><a href="index.html">Home</a><a href="services.html" class="active">Services</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="portal.html">Owner Portal</a><a href="contact.html">Contact</a></div><a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a><button class="mobile-toggle" aria-label="Menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button></div></nav>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a><span>/</span><em>Services</em></div></div>
 
-<section class="page-header">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg><span>Services</span></div>
-    <h1>Everything your shore property <em>needs.</em></h1>
-    <p class="lede">Three service pillars, one local team. Property care, construction and renovations, and full rental &amp; financial management &mdash; all handled in-house.</p>
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h1>Everything a shore property needs, under one roof.</h1>
+    <p class="lede">Three pillars: keep it maintained, improve it when it&rsquo;s time, and get the right tenant in it when you&rsquo;re not there.</p>
+  </div>
+</section>
+
+<section class="pillar-sec" id="care">
+  <div class="wrap pillar-grid">
+    <div>
+      <span class="eyebrow">Pillar One</span>
+      <h2>Property care &amp; maintenance</h2>
+      <p>The baseline. We keep eyes on the house year-round and handle the small things before they become the expensive things.</p>
+    </div>
+    <ul class="svc-list">
+        <li><span class="pent"></span><span><b>Property watch &amp; walkthroughs</b><br /><em>Scheduled interior and exterior checks with photo reports</em></span></li>
+        <li><span class="pent"></span><span><b>Handyman &amp; repairs</b><br /><em>Everyday fixes, furniture assembly, punch lists</em></span></li>
+        <li><span class="pent"></span><span><b>Plumbing, electrical &amp; HVAC</b><br /><em>Coordinated or handled in-house where licensed</em></span></li>
+        <li><span class="pent"></span><span><b>Pool &amp; spa care</b><br /><em>CPO-certified opening, service, and closing</em></span></li>
+        <li><span class="pent"></span><span><b>Grounds &amp; landscaping</b><br /><em>Mowing, beds, irrigation, seasonal cleanup</em></span></li>
+        <li><span class="pent"></span><span><b>Snow &amp; ice</b><br /><em>Walkways, drives, and entries kept clear</em></span></li>
+        <li><span class="pent"></span><span><b>Trash, junk &amp; power washing</b><br /><em>Cleanouts, hauling, siding and deck washing</em></span></li>
+        <li><span class="pent"></span><span><b>Storm prep &amp; response</b><br /><em>Secure before, inspect after, document for insurance</em></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pillar-sec" id="construction">
+  <div class="wrap pillar-grid">
+    <div>
+      <span class="eyebrow">Pillar Two</span>
+      <h2>Construction &amp; renovations</h2>
+      <p>Repairs, updates, and full renovations &mdash; not custom home building. Shore-built and shore-tested details, done by a crew that has to drive past the work afterward.</p>
+    </div>
+    <ul class="svc-list">
+        <li><span class="pent"></span><span><b>Doors &amp; windows</b><br /><em>Replacement, storm-rated units, trim and flashing</em></span></li>
+        <li><span class="pent"></span><span><b>Siding &amp; exterior</b><br /><em>Vinyl, fiber cement, trim, soffit and fascia</em></span></li>
+        <li><span class="pent"></span><span><b>Decks &amp; porches</b><br /><em>Rebuilds, resurfacing, railings, outdoor showers</em></span></li>
+        <li><span class="pent"></span><span><b>Roof &amp; gutter work</b><br /><em>Repairs, replacements, and drainage corrections</em></span></li>
+        <li><span class="pent"></span><span><b>Kitchens &amp; baths</b><br /><em>Full remodels from demo through final trim</em></span></li>
+        <li><span class="pent"></span><span><b>Interior renovations</b><br /><em>Flooring, drywall, paint, built-ins, layout changes</em></span></li>
+        <li><span class="pent"></span><span><b>Rental turnovers</b><br /><em>Refresh a tired unit between seasons</em></span></li>
+        <li><span class="pent"></span><span><b>Permits &amp; inspections</b><br /><em>Filed and shepherded with the local towns</em></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pillar-sec" id="rental">
+  <div class="wrap pillar-grid">
+    <div>
+      <span class="eyebrow">Pillar Three</span>
+      <h2>Rental, leasing &amp; HOA</h2>
+      <p>Backed by a New Jersey real estate license. We find and place the tenant and handle the paperwork &mdash; rent is paid directly to you, not through us.</p>
+    </div>
+    <ul class="svc-list">
+        <li><span class="pent"></span><span><b>Tenant placement</b><br /><em>Marketing, showings, screening, and lease signing</em></span></li>
+        <li><span class="pent"></span><span><b>Seasonal &amp; annual rentals</b><br /><em>Summer weeks or year-round leases</em></span></li>
+        <li><span class="pent"></span><span><b>Turnover &amp; inspections</b><br /><em>Move-in and move-out condition reports</em></span></li>
+        <li><span class="pent"></span><span><b>Lease preparation</b><br /><em>Agreements drawn, signed, and filed</em></span></li>
+        <li><span class="pent"></span><span><b>Vendor &amp; invoice management</b><br /><em>One bill, no chasing contractors</em></span></li>
+        <li><span class="pent"></span><span><b>HOA &amp; condo support</b><br /><em>Board meetings, dues, budgets, common-area care</em></span></li>
+        <li><span class="pent"></span><span><b>Multi-property oversight</b><br /><em>Portfolio-level scheduling and reporting</em></span></li>
+    </ul>
   </div>
 </section>
 
 <section class="creds">
-  <div class="container">
-    <div class="creds-grid">
-      <div class="cred"><div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg></div><div><div class="lbl">Licensed</div><div class="val">NJ Real Estate</div></div></div>
-      <div class="cred"><div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div><div><div class="lbl">Certified</div><div class="val">Pool &amp; Spa Operator</div></div></div>
-      <div class="cred"><div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172"/></svg></div><div><div class="lbl">Insured</div><div class="val">$2M Liability</div></div></div>
-      <div class="cred"><div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><div class="lbl">Response</div><div class="val">2-Hour Emergency</div></div></div>
-      <div class="cred"><div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div><div><div class="lbl">Local</div><div class="val">Cape May County</div></div></div>
-    </div>
+  <div class="wrap creds-grid">
+      <div class="cred"><strong>Licensed</strong><span>NJ real estate license</span></div>
+      <div class="cred"><strong>CPO certified</strong><span>Pool operator on staff</span></div>
+      <div class="cred"><strong>$2M liability</strong><span>Fully insured &amp; bonded</span></div>
+      <div class="cred"><strong>2-hour response</strong><span>For property emergencies</span></div>
+      <div class="cred"><strong>Local</strong><span>Cape May County based</span></div>
   </div>
 </section>
 
-<!-- ===== PILLAR 01: PROPERTY CARE ===== -->
-<section class="pillar-section" id="care">
-  <div class="container">
-    <div class="pillar-grid">
-      <div class="pillar-photo">
-        <div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg><div class="title">Property Care Photo</div><div class="sub">Inspection / walkthrough</div></div></div>
-      </div>
-      <div class="pillar-content">
-        <span class="pillar-badge">Pillar 01</span>
-        <h2>Property Care &amp; <em>Maintenance</em></h2>
-        <p class="lede">The routine, dependable work that keeps a shore property in shape year-round. Scheduled visits, on-call repairs, seasonal upkeep, and full storm response.</p>
-        <ul class="pillar-services">
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-            <div><h3>Property Watch &amp; Walkthroughs</h3><p>Scheduled visits, photo reports every trip, vacant-home checks, lock-out service.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg></div>
-            <div><h3>Maintenance &amp; Repairs</h3><p>Handyman, furniture assembly, plumbing, electrical, HVAC, painting. 24/7 emergency response.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
-            <div><h3>Pool, Grounds &amp; Landscaping</h3><p>Certified Pool &amp; Spa Operator, landscape care, irrigation, snow removal.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg></div>
-            <div><h3>Cleanup Services</h3><p>Trash and recycling, junk removal, power washing, attic and garage cleanouts.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg></div>
-            <div><h3>Storm Preparation &amp; Response</h3><p>Pre-storm securing, post-storm inspections, photo-documented insurance reports.</p></div>
-          </li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PILLAR 02: CONSTRUCTION ===== -->
-<section class="pillar-section alt" id="construction">
-  <div class="container">
-    <div class="pillar-grid reverse">
-      <div class="pillar-photo">
-        <div class="photo-placeholder dark"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21M3 13.125V19.5a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6.375m-16.5 0L12 4.5m-9 8.625l3-2.813m6-5.812l6 5.813m0 0l3 2.813"/></svg><div class="title">Construction Photo</div><div class="sub">Renovation project</div></div></div>
-      </div>
-      <div class="pillar-content">
-        <span class="pillar-badge">Pillar 02</span>
-        <h2>Construction &amp; <em>Renovations</em></h2>
-        <p class="lede">Repairs, updates, and full renovations &mdash; interior and exterior. We handle the work, permits, and vendor coordination in-house. We do not build custom homes from the ground up.</p>
-        <ul class="pillar-services">
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.406 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.406 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"/></svg></div>
-            <div><h3>Exterior Renovations</h3><p>Doors, windows, siding, decks, railings, outdoor structures. Salt-air-tough materials.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
-            <div><h3>Interior Renovations</h3><p>Kitchens, baths, flooring, trim, built-ins, whole-house refreshes and full remodels.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg></div>
-            <div><h3>Permits &amp; Code Compliance</h3><p>Permit filings, inspection coordination, and vendor management &mdash; handled in-house.</p></div>
-          </li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PILLAR 03: RENTAL, FINANCIAL & HOA ===== -->
-<section class="pillar-section" id="rental">
-  <div class="container">
-    <div class="pillar-grid">
-      <div class="pillar-photo">
-        <div class="photo-placeholder"><div class="label"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg><div class="title">Rental Property Photo</div><div class="sub">Turnover / handover</div></div></div>
-      </div>
-      <div class="pillar-content">
-        <span class="pillar-badge">Pillar 03</span>
-        <h2>Rental, Financial <em>&amp; HOA</em></h2>
-        <p class="lede">With our New Jersey real estate license, we handle the full rental lifecycle, rent collection and financial reporting, and HOA and multi-property coordination.</p>
-        <ul class="pillar-services">
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
-            <div><h3>Rental &amp; Tenant Management</h3><p>Marketing, tenant screening, lease placement, vacation turnovers, Airbnb/VRBO coordination.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.375m-1.5-5.625v.75c0 .414.336.75.75.75h.75m-9-2.25h-.75c-.621 0-1.125-.504-1.125-1.125v-.75"/></svg></div>
-            <div><h3>Rent Collection &amp; Financial Reporting</h3><p>ACH deposits, monthly owner statements, expense tracking, 1099s, year-end summaries.</p></div>
-          </li>
-          <li>
-            <div class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg></div>
-            <div><h3>HOA &amp; Vendor Coordination</h3><p>Board support, vendor scheduling, project oversight, multi-property portfolio reporting.</p></div>
-          </li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Get a Quote<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ (trimmed) ===== -->
-<section class="section" style="background: var(--cream-2);">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow center">Questions</span>
-      <h2>Common questions, <em>straight answers.</em></h2>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Straight answers.</h2>
     </div>
     <div class="faq">
-      <details class="faq-item"><summary>Do you collect rent and manage tenants?</summary><p>Yes. With our New Jersey real estate license, we handle the full rental lifecycle &mdash; tenant screening, lease placement, rent collection with ACH deposits to owners, damage handling, and everything in between. This applies to long-term rentals and vacation rentals alike.</p></details>
-      <details class="faq-item"><summary>What kind of construction work do you do?</summary><p>Repairs, updates, and renovations &mdash; both exterior (doors, windows, siding, decks) and interior (kitchens, baths, flooring, full remodels). We do not build custom homes from the ground up. If your project needs new construction, we can refer you to trusted local builders and stay involved to handle everything else.</p></details>
-      <details class="faq-item"><summary>Do you require long-term contracts?</summary><p>For individual homeowners, no &mdash; our service agreements are month-to-month after the first quarter. HOA and condo association agreements require a longer minimum term (typically one year) because board work involves budgeting and coordinated planning across an entire community. Rental management engagements carry a season or lease-term minimum.</p></details>
-      <details class="faq-item"><summary>What's your typical response time for emergencies?</summary><p>Under two hours, day or night. For active emergencies like burst pipes or storm damage, a crew is usually on-site within ninety minutes. Our 24/7 line is answered by a real person, every time.</p></details>
-      <details class="faq-item"><summary>Are your crews licensed and insured?</summary><p>Yes. Our handyman and construction crews handle general work directly, and we partner with licensed plumbers, electricians, and HVAC contractors for specialty trades. Red Turtle carries $2M in general liability coverage, holds a New Jersey real estate license, and all sub-trade partners must show current licensing before working on any property we manage.</p></details>
+      <details><summary>Do I have to sign a long-term contract?</summary><p>Individual homeowners are month-to-month &mdash; stay because the work is good, not because you&rsquo;re locked in. HOA and condo association agreements do require a longer minimum term, typically one year, because board work involves budgeting, vendor commitments, and community-wide planning.</p></details>
+      <details><summary>Do you collect rent?</summary><p>No. We handle finding and placing the tenant &mdash; marketing, showings, screening, and the lease &mdash; but rent is paid directly to you. We don&rsquo;t hold or disburse rent money on an owner&rsquo;s behalf.</p></details>
+      <details><summary>Do you build custom homes?</summary><p>No. We focus on repairs, updates, and renovations &mdash; doors, windows, siding, decks, kitchens, baths, and interior work. For ground-up custom builds we&rsquo;ll point you to someone who does it well.</p></details>
+      <details><summary>What counts as an emergency, and how fast do you respond?</summary><p>Water, heat, power, storm damage, or anything that puts the property or a tenant at risk. Our commitment is a two-hour response, and someone answers the line 24/7 in season.</p></details>
+      <details><summary>How do I know what happened at my house?</summary><p>Every visit comes with dated photos and a short written note. After storms you get a before-and-after set you can hand straight to your insurer.</p></details>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
-  <div class="container">
-    <div class="cta-grid">
-      <div>
-        <h2>Ready to <em>hand off the headaches?</em></h2>
-        <p>Tell us about your property and we'll come out for a free walkthrough &mdash; usually within the week.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="tel:+16095550100" class="btn btn-white"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(609) 555-0100</a>
-        <a href="contact.html" class="btn btn-light">Contact Us<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg></a>
-      </div>
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2>Not sure which pillar you need?</h2>
+      <p>Tell us what&rsquo;s going on with the property. We&rsquo;ll tell you honestly what it does and doesn&rsquo;t need.</p>
+    </div>
+    <div class="band-actions">
+      <a href="contact.html" class="btn btn-cream">Request a walkthrough</a>
+      <a href="tel:+16095550100" class="btn btn-ghost">(609) 555-0100</a>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo-wrap"><span class="logo-img size-footer" style="filter: brightness(1.1);"></span></div>
-        <p class="foot-about">Locally owned. Full-service property management, construction, and rental services for Cape May County and the Jersey Shore.</p>
-        <div class="foot-contact">
-          <a href="tel:+16095550100"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(609) 555-0100</a>
-          <a href="mailto:info@redturtlepm.com"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>info@redturtlepm.com</a>
-          <span><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Cape May Court House, NJ</span>
-        </div>
-      </div>
-      <div><h4>Property Care</h4><ul><li><a href="services.html#care">Property Watch</a></li><li><a href="services.html#care">Maintenance &amp; Repairs</a></li><li><a href="services.html#care">Pool &amp; Grounds</a></li><li><a href="services.html#care">Cleanup Services</a></li><li><a href="services.html#care">Storm Prep &amp; Response</a></li></ul></div>
-      <div><h4>Construction &amp; Rental</h4><ul><li><a href="services.html#construction">Exterior Renovations</a></li><li><a href="services.html#construction">Interior Renovations</a></li><li><a href="services.html#rental">Rental Management</a></li><li><a href="services.html#rental">Rent Collection &amp; Reporting</a></li><li><a href="services.html#rental">HOA Coordination</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="portal.html">Owner Portal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo logo-foot"></span>
+      <p>Locally owned property management and construction for Cape May County and the Wildwood shore.</p>
     </div>
-    <div class="foot-bar">
-      <div>&copy; 2026 Red Turtle Property Management. All rights reserved.</div>
-      <div class="socials">
-        <a href="#" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.87v-6.99H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v6.99A10 10 0 0022 12z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.41-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11-.01-4.12 2.06 2.06 0 01.01 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg></a>
-      </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li><a href="services.html#care">Property care &amp; maintenance</a></li><li><a href="services.html#construction">Construction &amp; renovations</a></li><li><a href="services.html#rental">Rental, leasing &amp; HOA</a></li></ul>
     </div>
+    <div>
+      <h4>Company</h4>
+      <ul><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+16095550100">(609) 555-0100</a></li>
+        <li><a href="mailto:info@redturtlepm.com">info@redturtlepm.com</a></li>
+        <li>Cape May County, NJ</li>
+        <li>Mon&ndash;Fri 8&ndash;5 &middot; Emergencies 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>&copy; 2026 Red Turtle Property Management LLC. Licensed NJ real estate &middot; CPO certified &middot; Insured.</p>
   </div>
 </footer>
-
 <script>
-  document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
-    const links = document.querySelector('.nav-links');
-    const open = links.style.display === 'flex';
-    if (open) { links.style.cssText = ''; } else {
-      links.style.cssText = 'display:flex;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px;border-bottom:1px solid rgba(43,45,58,.1);align-items:flex-start;';
-    }
-  });
+(function () {
+  var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  if (t && l) {
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
 </script>
 </body>
 </html>

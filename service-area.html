@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Service Area — Red Turtle Property Management</title>
+<meta name="description" content="Serving Ocean City, Sea Isle City, Avalon, Stone Harbor, the Wildwoods, Cape May, and mainland Cape May County, NJ." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+
+.area-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 3.2rem; align-items: center; }
+.map-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 1.6rem; box-shadow: var(--shadow);
+}
+.map-card svg { display: block; width: 100%; height: auto; }
+.map-legend { display: flex; gap: 1.4rem; font-size: .82rem; color: var(--slate); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.map-legend span { display: flex; align-items: center; gap: .45rem; }
+.dot-red { width: 10px; height: 10px; border-radius: 50%; background: var(--red); display: inline-block; }
+.dot-ink { width: 10px; height: 10px; border-radius: 50%; background: var(--slate); display: inline-block; }
+.town-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.town {
+  background: var(--white); border: 1px solid var(--line); border-radius: 10px;
+  padding: .85rem 1rem; font-weight: 600; font-size: .95rem;
+  display: flex; align-items: center; gap: .6rem;
+}
+.local { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.local h3 { font-size: 1.1rem; }
+.local p { font-size: .95rem; margin: 0; }
+@media (max-width: 900px) {
+  .area-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .town-grid { grid-template-columns: repeat(2, 1fr); }
+  .local { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Red Turtle Property Management — home"><span class="logo logo-nav"></span></a>
+    <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="service-area.html" class="is-active">Service Area</a><a href="contact.html">Contact</a><a href="tel:+16095550100" class="only-mobile">Call (609) 555-0100</a><a href="contact.html" class="only-mobile">Get a quote</a></nav>
+    <div class="nav-actions">
+      <a href="tel:+16095550100" class="nav-phone">(609) 555-0100</a>
+      <a href="contact.html" class="btn btn-red">Get a quote</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a><span>/</span><em>Service Area</em></div></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Service area</span>
+    <h1>Cape May County, end to end.</h1>
+    <p class="lede">From Ocean City down through the Wildwoods to Cape May Point &mdash; islands and mainland both.</p>
+  </div>
+</section>
+
+<section class="sec-tight">
+  <div class="wrap area-grid">
+    <div class="map-card">
+      <svg viewBox="0 0 520 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the Cape May County service area">
+  <rect width="520" height="620" fill="#EEF3F4" rx="10" />
+  <!-- bay -->
+  <path d="M198 30 C 236 120, 250 240, 246 330 C 242 430, 214 520, 180 590 L 300 600 C 330 520, 344 420, 340 320 C 336 200, 300 90, 268 20 Z" fill="#DCE8EA" />
+  <!-- mainland -->
+  <path d="M20 20 L 236 20 C 258 130, 262 260, 240 360 C 224 450, 190 530, 150 600 L 20 600 Z" fill="#EAE3D3" />
+  <!-- barrier islands -->
+  <path d="M276 34 C 300 88, 310 120, 314 154 L 284 160 C 278 116, 268 74, 254 40 Z" fill="#EAE3D3" />
+  <path d="M300 140 C 322 200, 334 262, 340 330 L 304 336 C 298 270, 284 208, 264 150 Z" fill="#EAE3D3" />
+  <path d="M326 320 C 340 380, 342 440, 330 496 L 294 490 C 304 438, 302 382, 288 326 Z" fill="#EAE3D3" />
+  <path d="M304 484 C 300 530, 278 570, 236 592 L 208 562 C 252 542, 272 516, 276 478 Z" fill="#EAE3D3" />
+  <!-- ocean label -->
+  <text x="446" y="330" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="#8CA6AB" transform="rotate(90 446 330)" letter-spacing="3">ATLANTIC</text>
+    <g class="pin">
+      <circle cx="300" cy="74" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="300" cy="74" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="314" y="78" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Ocean City</text>
+    </g>
+    <g class="pin">
+      <circle cx="316" cy="168" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="316" cy="168" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="330" y="172" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Sea Isle City</text>
+    </g>
+    <g class="pin">
+      <circle cx="330" cy="252" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="330" cy="252" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="344" y="256" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Avalon</text>
+    </g>
+    <g class="pin">
+      <circle cx="338" cy="312" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="338" cy="312" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="352" y="316" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Stone Harbor</text>
+    </g>
+    <g class="pin">
+      <circle cx="330" cy="390" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="330" cy="390" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="344" y="394" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">North Wildwood</text>
+    </g>
+    <g class="pin">
+      <circle cx="322" cy="428" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="322" cy="428" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="336" y="432" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Wildwood</text>
+    </g>
+    <g class="pin">
+      <circle cx="312" cy="464" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="312" cy="464" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="326" y="468" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Wildwood Crest</text>
+    </g>
+    <g class="pin">
+      <circle cx="268" cy="536" r="14" fill="#CD1F28" opacity=".14"><animate attributeName="r" values="8;18;8" dur="3.4s" repeatCount="indefinite" /><animate attributeName="opacity" values=".22;0;.22" dur="3.4s" repeatCount="indefinite" /></circle>
+      <circle cx="268" cy="536" r="6" fill="#CD1F28" stroke="#fff" stroke-width="2" />
+      <text x="282" y="540" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#26221F">Cape May</text>
+    </g>
+    <g class="pin">
+      <circle cx="176" cy="300" r="5" fill="#6E6863" stroke="#fff" stroke-width="2" />
+      <text x="164" y="304" text-anchor="end" font-family="Manrope, sans-serif" font-size="12" font-weight="600" fill="#4B4643">Cape May Court House</text>
+    </g>
+    <g class="pin">
+      <circle cx="196" cy="404" r="5" fill="#6E6863" stroke="#fff" stroke-width="2" />
+      <text x="184" y="408" text-anchor="end" font-family="Manrope, sans-serif" font-size="12" font-weight="600" fill="#4B4643">Rio Grande</text>
+    </g>
+    <g class="pin">
+      <circle cx="150" cy="470" r="5" fill="#6E6863" stroke="#fff" stroke-width="2" />
+      <text x="138" y="474" text-anchor="end" font-family="Manrope, sans-serif" font-size="12" font-weight="600" fill="#4B4643">Villas</text>
+    </g>
+</svg>
+      <div class="map-legend">
+        <span><i class="dot-red"></i> Island &amp; beach towns</span>
+        <span><i class="dot-ink"></i> Mainland communities</span>
+      </div>
+    </div>
+    <div>
+      <h2>Towns we cover</h2>
+      <p>If your property sits in Cape May County, we can get to it. Outside the county line, ask &mdash; we take work in northern Cape May and southern Atlantic County case by case.</p>
+      <div class="town-grid">
+      <div class="town"><span class="pent"></span>Ocean City</div>
+      <div class="town"><span class="pent"></span>Sea Isle City</div>
+      <div class="town"><span class="pent"></span>Avalon</div>
+      <div class="town"><span class="pent"></span>Stone Harbor</div>
+      <div class="town"><span class="pent"></span>North Wildwood</div>
+      <div class="town"><span class="pent"></span>Wildwood</div>
+      <div class="town"><span class="pent"></span>Wildwood Crest</div>
+      <div class="town"><span class="pent"></span>Cape May</div>
+      <div class="town"><span class="pent"></span>Cape May Court House</div>
+      <div class="town"><span class="pent"></span>Rio Grande</div>
+      <div class="town"><span class="pent"></span>Villas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why local matters</span>
+      <h2>Distance is the whole business.</h2>
+    </div>
+    <div class="local">
+      <div><h3>We know the towns</h3><p>Permit desks, inspection schedules, and rental ordinances differ island to island. We file where we work.</p></div>
+      <div><h3>We know the weather</h3><p>Nor&rsquo;easters, king tides, and salt air. Storm prep starts before the forecast makes the news.</p></div>
+      <div><h3>We&rsquo;re close by</h3><p>Most properties are inside a 25-minute drive, which is what makes a two-hour emergency response realistic.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2>Is your property in the area?</h2>
+      <p>Send us the address. We&rsquo;ll tell you straight away whether we can cover it and what a visit schedule would look like.</p>
+    </div>
+    <div class="band-actions">
+      <a href="contact.html" class="btn btn-cream">Request a walkthrough</a>
+      <a href="tel:+16095550100" class="btn btn-ghost">(609) 555-0100</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo logo-foot"></span>
+      <p>Locally owned property management and construction for Cape May County and the Wildwood shore.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li><a href="services.html#care">Property care &amp; maintenance</a></li><li><a href="services.html#construction">Construction &amp; renovations</a></li><li><a href="services.html#rental">Rental, leasing &amp; HOA</a></li></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+16095550100">(609) 555-0100</a></li>
+        <li><a href="mailto:info@redturtlepm.com">info@redturtlepm.com</a></li>
+        <li>Cape May County, NJ</li>
+        <li>Mon&ndash;Fri 8&ndash;5 &middot; Emergencies 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>&copy; 2026 Red Turtle Property Management LLC. Licensed NJ real estate &middot; CPO certified &middot; Insured.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  if (t && l) {
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+</html>

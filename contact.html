@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Red Turtle Property Management</title>
+<meta name="description" content="Request a free property walkthrough in Cape May County, NJ. Same-day replies, 24/7 emergency line." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+
+.contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: start; }
+.form-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 2.2rem; box-shadow: var(--shadow); }
+.field { margin-bottom: 1.1rem; }
+.field label { display: block; font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--slate); margin-bottom: .4rem; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: .8rem .9rem; border: 1.5px solid var(--line); border-radius: 10px;
+  font-family: 'Manrope', sans-serif; font-size: 1rem; color: var(--ink); background: var(--sand);
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--red); background: #fff; }
+.field textarea { min-height: 130px; resize: vertical; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.form-note { font-size: .82rem; color: var(--slate); margin: 1rem 0 0; }
+.info-block { border: 1px solid var(--line); border-radius: var(--r); padding: 1.6rem; background: var(--white); margin-bottom: 1.2rem; }
+.info-block h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+.info-block p { font-size: .95rem; margin: 0; }
+.info-block a { font-weight: 700; text-decoration: none; color: var(--red); }
+.urgent { background: var(--ink); border-color: var(--ink); }
+.urgent h3, .urgent p { color: var(--sand); }
+.urgent p { color: rgba(250,246,238,.72); }
+.urgent a { color: #fff; }
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Red Turtle Property Management — home"><span class="logo logo-nav"></span></a>
+    <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="contact.html" class="is-active">Contact</a><a href="tel:+16095550100" class="only-mobile">Call (609) 555-0100</a><a href="contact.html" class="only-mobile">Get a quote</a></nav>
+    <div class="nav-actions">
+      <a href="tel:+16095550100" class="nav-phone">(609) 555-0100</a>
+      <a href="contact.html" class="btn btn-red">Get a quote</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a><span>/</span><em>Contact</em></div></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Tell us about the property.</h1>
+    <p class="lede">Walkthroughs are free and there&rsquo;s no obligation attached. We reply the same business day.</p>
+  </div>
+</section>
+
+<section class="sec-tight">
+  <div class="wrap contact-grid">
+    <div class="form-card">
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Jane Dooley" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="(609) 555-0123" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@email.com" />
+      </div>
+      <div class="field">
+        <label for="address">Property address</label>
+        <input type="text" id="address" placeholder="123 Ocean Ave, Wildwood, NJ" />
+      </div>
+      <div class="field">
+        <label for="need">What do you need?</label>
+        <select id="need">
+          <option>Property care &amp; maintenance</option>
+          <option>Construction or renovation</option>
+          <option>Rental, leasing or HOA management</option>
+          <option>Emergency or storm damage</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Details</label>
+        <textarea id="message" placeholder="Tell us about the property, what it needs, and when you'd like us out there."></textarea>
+      </div>
+      <button type="button" class="btn btn-red" id="sendBtn" style="width:100%;">Send request</button>
+      <p class="form-note">This opens your email app with everything filled in, addressed to info@redturtlepm.com. Prefer the phone? Call <a href="tel:+16095550100" style="color:var(--red);font-weight:700;text-decoration:none;">(609) 555-0100</a>.</p>
+    </div>
+
+    <div>
+      <div class="info-block urgent">
+        <h3>Emergency?</h3>
+        <p>Burst pipe, storm damage, no heat, no power &mdash; call, don&rsquo;t email. Two-hour response commitment, line answered 24/7.</p>
+        <p style="margin-top:.8rem;"><a href="tel:+16095550100" style="font-size:1.15rem;">(609) 555-0100</a></p>
+      </div>
+      <div class="info-block">
+        <h3>Office hours</h3>
+        <p>Monday&ndash;Friday, 8am&ndash;5pm<br />Saturday by appointment<br />Emergency line always on</p>
+      </div>
+      <div class="info-block">
+        <h3>Where we work</h3>
+        <p>Cape May County, NJ &mdash; Ocean City through Cape May, islands and mainland. <a href="service-area.html">See the full area &rarr;</a></p>
+      </div>
+      <div class="info-block">
+        <h3>Credentials</h3>
+        <p>NJ real estate license &middot; CPO certified &middot; $2M general liability &middot; Fully insured and bonded</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var btn = document.getElementById('sendBtn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    function v(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    var name = v('name'), phone = v('phone'), email = v('email');
+    var address = v('address'), need = v('need'), message = v('message');
+    if (!name || (!phone && !email)) {
+      alert('Add your name and either a phone number or an email so we can get back to you.');
+      return;
+    }
+    var subject = 'Property request' + (address ? ' — ' + address : '') + ' (' + need + ')';
+    var lines = [
+      'Name: ' + name,
+      'Phone: ' + (phone || '—'),
+      'Email: ' + (email || '—'),
+      'Property address: ' + (address || '—'),
+      'Needs: ' + need,
+      '',
+      'Details:',
+      message || '—'
+    ];
+    window.location.href = 'mailto:info@redturtlepm.com?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(lines.join('\n'));
+  });
+})();
+</script>
+
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo logo-foot"></span>
+      <p>Locally owned property management and construction for Cape May County and the Wildwood shore.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li><a href="services.html#care">Property care &amp; maintenance</a></li><li><a href="services.html#construction">Construction &amp; renovations</a></li><li><a href="services.html#rental">Rental, leasing &amp; HOA</a></li></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+16095550100">(609) 555-0100</a></li>
+        <li><a href="mailto:info@redturtlepm.com">info@redturtlepm.com</a></li>
+        <li>Cape May County, NJ</li>
+        <li>Mon&ndash;Fri 8&ndash;5 &middot; Emergencies 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>&copy; 2026 Red Turtle Property Management LLC. Licensed NJ real estate &middot; CPO certified &middot; Insured.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  if (t && l) {
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+</html>
